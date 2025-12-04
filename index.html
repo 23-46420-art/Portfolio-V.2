@@ -4,118 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earn Castillo — Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap');
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Rajdhani', sans-serif;
-      background: radial-gradient(circle at center, #000011 0%, #000000 100%);
-      color: #e0e0ff;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Orbitron', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .neon-text {
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #0088ff;
-    }
-
-    .glow-box {
-      background: rgba(10, 10, 30, 0.8);
-      border: 1px solid #00ffff;
-      box-shadow: 0 0 20px #00ffff66;
-      border-radius: 12px;
-    }
-
-    .progress-bar {
-      background: linear-gradient(90deg, #00ffff, #00aaff);
-      box-shadow: 0 0 10px #00ffff;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* 📱 Responsive Text Tweaks */
-    @media (max-width: 640px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
-      h3 { font-size: 1.25rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
   <!-- Header -->
-  <header class="bg-black bg-opacity-80 border-b border-cyan-400 sticky top-0 z-50 shadow-lg backdrop-blur-md">
-    <nav class="max-w-6xl mx-auto flex flex-wrap justify-between items-center px-4 py-3">
-      <h1 class="text-xl sm:text-2xl neon-text mb-2 sm:mb-0">Earn Castillo</h1>
-      <ul class="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm uppercase font-bold">
+  <header class="header">
+    <nav class="nav-container">
+      <h1 class="logo">Earn Castillo</h1>
+      <ul class="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
-</ul>
-
+      </ul>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
   </header>
 
   <!-- Intro -->
-  <section class="relative flex flex-col justify-center items-center text-center min-h-screen bg-[url('iskay.png')] bg-cover bg-center bg-fixed fade-in">
-    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-    <div class="relative z-10 px-6 sm:px-10">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-cyan-400 drop-shadow-lg">
-        Student: Earn Castillo
-      </h1>
-      <p class="text-cyan-200 mt-4 text-base sm:text-lg">
-        IT Student • Frontend Explorer • Code Adventurer
-      </p>
-      <a href="#about" class="mt-8 inline-block bg-cyan-400 text-black font-bold px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:bg-cyan-300 transition">
-        Enter 🚀
-      </a>
+  <section class="intro-section fade-in">
+    <div class="intro-overlay"></div>
+    <div class="intro-content">
+      <h1 class="intro-title">Student: Earn Castillo</h1>
+      <p class="intro-subtitle">IT Student • Frontend Explorer • Code Adventurer</p>
+      <a href="#about" class="cta-button">Enter 🚀</a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="max-w-5xl mx-auto py-16 sm:py-20 px-6 text-center fade-in">
-    <h3 class="text-3xl sm:text-4xl neon-text mb-10 tracking-widest">🎮 Student Profile</h3>
-    <div class="glow-box p-6 sm:p-10 text-left flex flex-col md:flex-row md:items-center md:gap-10">
-      <div class="md:w-1/3 text-center mb-6 md:mb-0">
-        <img src="pektur.jpg" alt="Player Avatar" class="mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-cyan-400 shadow-lg">
-        <p class="mt-4 text-cyan-300 uppercase text-sm tracking-widest">Student ID: 23-46420</p>
+  <section id="about" class="about-section fade-in">
+    <h3 class="section-title">🎮 Student Profile</h3>
+    <div class="about-container">
+      <div class="about-image-container">
+        <img src="pektur.jpg" alt="Player Avatar" class="profile-image">
+        <p class="student-id">Student ID: 23-46420</p>
       </div>
-
-      <div class="md:w-2/3 space-y-4 text-cyan-100 leading-relaxed">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <p><strong class="text-cyan-300">Name:</strong> Earn Eliazar M. Castillo</p>
-          <p><strong class="text-cyan-300">Role:</strong> IT Student</p>
-          <p><strong class="text-cyan-300">School:</strong> Batangas State University</p>
-          <p><strong class="text-cyan-300">Age:</strong> 20 years old</p>
-          <p><strong class="text-cyan-300">Birthday:</strong> November 28, 2005</p>
-          <p><strong class="text-cyan-300">Address:</strong> Talaga East, Mabini, Batangas</p>
+      <div class="about-details">
+        <div class="details-grid">
+          <p><strong>Name:</strong> Earn Eliazar M. Castillo</p>
+          <p><strong>Role:</strong> IT Student</p>
+          <p><strong>School:</strong> Batangas State University</p>
+          <p><strong>Age:</strong> 20 years old</p>
+          <p><strong>Birthday:</strong> November 28, 2005</p>
+          <p><strong>Address:</strong> Talaga East, Mabini, Batangas</p>
         </div>
-        <div class="mt-6 sm:mt-8 border-t border-cyan-700 pt-6">
-          <p class="italic text-cyan-200 text-base sm:text-lg text-center md:text-left">
-            “A front-end explorer and code adventurer on a quest to design immersive digital worlds.”
+        <div class="quote-container">
+          <p class="quote">
+            "A front-end explorer and code adventurer on a quest to design immersive digital worlds."
           </p>
         </div>
       </div>
@@ -123,192 +63,146 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="bg-black bg-opacity-70 py-16 fade-in">
-    <div class="max-w-4xl mx-auto text-center px-6">
-      <h3 class="text-3xl sm:text-4xl neon-text mb-10">Technical Skills</h3>
-      <div class="glow-box p-6 sm:p-8">
-        <h4 class="text-base sm:text-lg text-cyan-300 mb-4">Programming Languages</h4>
-        <p class="text-sm sm:text-base">HTML | CSS | JavaScript | SQL</p>
-<div class="mt-8 text-left">
-  <!-- Frontend -->
-  <p class="font-bold text-cyan-300 mb-1">Frontend Development</p>
-  <div class="w-full bg-gray-800 rounded-full h-3 sm:h-4 mb-4">
-    <div class="progress-bar h-3 sm:h-4 rounded-full" style="width: 85%;"></div>
-  </div>
-
-  <!-- Database -->
-  <p class="font-bold text-cyan-300 mb-1">Database Management</p>
-  <div class="w-full bg-gray-800 rounded-full h-3 sm:h-4 mb-4">
-    <div class="progress-bar h-3 sm:h-4 rounded-full" style="width: 75%;"></div>
-  </div>
-
-  <!-- Documentation -->
-  <p class="font-bold text-cyan-300 mb-1">Documentation</p>
-  <div class="w-full bg-gray-800 rounded-full h-3 sm:h-4 mb-4">
-    <div class="progress-bar h-3 sm:h-4 rounded-full" style="width: 90%;"></div>
-  </div>
-
-  <!-- Analytical / Math Skills -->
-  <p class="font-bold text-cyan-300 mb-1">Analytical / Math Skills</p>
-  <div class="w-full bg-gray-800 rounded-full h-3 sm:h-4">
-    <div class="progress-bar h-3 sm:h-4 rounded-full" style="width: 80%;"></div>
-  </div>
-</div>
-
+  <section id="skills" class="skills-section fade-in">
+    <div class="skills-container">
+      <h3 class="section-title">Technical Skills</h3>
+      <div class="skills-card">
+        <h4 class="skills-subtitle">Programming Languages</h4>
+        <p class="languages-list">HTML | CSS | JavaScript | SQL</p>
+        <div class="skills-progress">
+          <p class="skill-name">Frontend Development</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%;"></div>
+          </div>
+          
+          <p class="skill-name">Database Management</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+          </div>
+          
+          <p class="skill-name">Documentation</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%;"></div>
+          </div>
+          
+          <p class="skill-name">Analytical / Math Skills</p>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%;"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
- <!-- Projects -->
-<section id="projects" class="max-w-6xl mx-auto py-16 px-6 fade-in">
-  <h3 class="text-3xl sm:text-4xl neon-text mb-10 text-center">Student Projects</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-    <!-- Project Card -->
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">🔔 HELMSify</h4>
-        <p>Python desktop notification script using Plyer for task reminders.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Language:</strong> Python</p>
+  <!-- Projects -->
+  <section id="projects" class="projects-section fade-in">
+    <h3 class="section-title">Student Projects</h3>
+    <div class="projects-grid">
+      <!-- Project Cards -->
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">🔔 HELMSify</h4>
+          <p class="project-description">Python desktop notification script using Plyer for task reminders.</p>
+          <p class="project-tech"><strong>Language:</strong> Python</p>
+        </div>
+        <a href="https://github.com/23-46420-art/helmstify" target="_blank" class="project-link">View Source Code</a>
       </div>
-      <a href="https://github.com/23-46420-art/helmstify" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">🌐 Landing Page</h4>
+          <p class="project-description">Mobile-friendly page for a tourist service with smooth scrolling and interactive effects.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Landing-page" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">💱 Money Converter</h4>
+          <p class="project-description">A currency converter integrated with a database to store conversion history and user preferences.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript, SQL</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Money-Converter" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">🍔 Ordering System</h4>
+          <p class="project-description">A web-based ordering system with a connected database for managing customer orders, menu items, and receipts.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript, PHP, SQL</p>
+        </div>
+        <a href="https://github.com/23-46420-art/OrderingSystem" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">💻 Portfolio V.1</h4>
+          <p class="project-description">First version of the personal portfolio website showcasing Earn's early design skills.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Portfolio" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">🧾 Portfolio V.2</h4>
+          <p class="project-description">Built using HTML, CSS, and JavaScript for smooth transitions and scroll animations.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Portfolio-V.2" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">➗ Simple Calculator</h4>
+          <p class="project-description">JavaScript-based calculator for basic math operations with instant results.</p>
+          <p class="project-tech"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Calculator" target="_blank" class="project-link">View Source Code</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <h4 class="project-title">🏨 VEELATSALVANIA</h4>
+          <p class="project-description">A hostel management system with a connected database for managing student records, room assignments, and billing.</p>
+          <p class="project-tech"><strong>Languages:</strong> JavaScript, PHP, SQL</p>
+        </div>
+        <a href="https://github.com/23-46420-art/Veelatsalvania-hostel" target="_blank" class="project-link">View Source Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="resume-section fade-in">
+    <h3 class="section-title">Resume</h3>
+    <div class="resume-card">
+      <p class="resume-description">
+        Explore my detailed resume that highlights my education, technical expertise, and project achievements as an IT student.
+      </p>
+      <a href="Resume-Earn Castillo.pdf" target="_blank" class="resume-button">
+        📄 View Resume
       </a>
     </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">🌐 Landing Page</h4>
-        <p>Mobile-friendly page for a tourist service with smooth scrolling and interactive effects.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Landing-page" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">💱 Money Converter</h4>
-        <p>A currency converter integrated with a database to store conversion history and user preferences, featuring live calculations with JavaScript.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript, SQL</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Money-Converter" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">🍔 Ordering System</h4>
-        <p>A web-based ordering system with a connected database for managing customer orders, menu items, and receipts.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript, PHP, SQL</p>
-      </div>
-      <a href="https://github.com/23-46420-art/OrderingSystem" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">💻 Portfolio V.1</h4>
-        <p>First version of the personal portfolio website showcasing Earn’s early design skills.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Portfolio" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">🧾 Portfolio V.2</h4>
-        <p>Built using HTML, CSS, and JavaScript for smooth transitions and scroll animations.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Portfolio-V.2" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">➗ Simple Calculator</h4>
-        <p>JavaScript-based calculator for basic math operations with instant results.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> HTML, CSS, JavaScript</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Calculator" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-    <div class="glow-box p-5 flex flex-col justify-between">
-      <div>
-        <h4 class="text-cyan-300 text-lg mb-2">🏨 VEELATSALVANIA</h4>
-        <p>A hostel management system with a connected database for managing student records, room assignments, and billing.</p>
-        <p class="text-cyan-400 text-sm mt-2"><strong>Languages:</strong> JavaScript, PHP, SQL</p>
-      </div>
-      <a href="https://github.com/23-46420-art/Veelatsalvania-hostel" target="_blank"
-         class="mt-4 inline-block bg-cyan-400 text-black text-sm font-bold px-4 py-2 rounded-full hover:bg-cyan-300 transition text-center">
-        View Source Code
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- Resume -->
-<section id="resume" class="bg-black bg-opacity-70 py-16 text-center fade-in px-6">
-  <h3 class="text-3xl sm:text-4xl neon-text mb-8"> Resume</h3>
-  <div class="glow-box max-w-3xl mx-auto p-8">
-    <p class="text-cyan-200 mb-6 text-base sm:text-lg leading-relaxed">
-      Explore my detailed resume that highlights my education, technical expertise, and project achievements as an IT student.
-    </p>
-    <a href="Resume - Intern Software Developer (1).pdf" target="_blank"
-       class="inline-block bg-cyan-400 text-black font-bold px-8 py-3 rounded-full text-base sm:text-lg hover:bg-cyan-300 transition">
-      📄 View Resume
-    </a>
-  </div>
-</section>
-
-
-
-
+  </section>
 
   <!-- Contact -->
-   <section id="contact" class="bg-black bg-opacity-70 py-16 text-center fade-in px-6">
-  <h3 class="text-3xl sm:text-4xl neon-text mb-6">Contact Console</h3>
-  <p class="text-cyan-200 mb-6 text-sm sm:text-base">Ready to connect and collaborate!</p>
-  <div class="glow-box max-w-md mx-auto p-6 text-sm sm:text-lg space-y-2">
-    <p><strong>📧 Email:</strong> yael28castillo@gmail.com</p>
-    <p><strong>📱 Phone:</strong> 092916688406</p>
-    <p><strong>💻 GitHub:</strong> <a href="https://github.com/23-46420-art" target="_blank" class="text-cyan-400 hover:underline">github.com/23-46420-art</a></p>
-    <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/earn-eliazar-castillo-728172389/" target="_blank" class="text-cyan-400 hover:underline">linkedin.com/in/earn-eliazar-castillo-728172389/</a></p>
-  </div>
-</section>
+  <section id="contact" class="contact-section fade-in">
+    <h3 class="section-title">Contact Console</h3>
+    <p class="contact-subtitle">Ready to connect and collaborate!</p>
+    <div class="contact-card">
+      <p><strong>📧 Email:</strong> yael28castillo@gmail.com</p>
+      <p><strong>📱 Phone:</strong> 092916688406</p>
+      <p><strong>💻 GitHub:</strong> <a href="https://github.com/23-46420-art" target="_blank">github.com/23-46420-art</a></p>
+      <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/earn-eliazar-castillo-728172389/" target="_blank">linkedin.com/in/earn-eliazar-castillo-728172389/</a></p>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-black border-t border-cyan-400 text-center text-cyan-400 py-4 text-xs sm:text-sm">
-    <p>&copy; 2025 Earn Castillo | Student ID: #23-46420 | Powered by HTML & Tailwind</p>
+  <footer class="footer">
+    <p>&copy; 2025 Earn Castillo | Student ID: #23-46420 | Powered by HTML & CSS</p>
   </footer>
 
-  <!-- Scroll Animation -->
-  <script>
-    const elements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
